@@ -17,5 +17,5 @@ When the libraries are installed, close the workbench and start a new python wor
 
 ## Run the example
 
-Now you can run the program test.py
+Now you can run the program detect_face.py
 
