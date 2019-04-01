@@ -23,16 +23,16 @@ display(Image(filename="teamphoto.jpg"))
 
 group_photo = face_recognition.load_image_file("teamphoto.jpg")
 group_face_locations = face_recognition.face_locations(group_photo)
-print len(group_face_locations)
+print(len(group_face_locations))
 counter=0
 for face_location in group_face_locations:
   top, right, bottom, left = face_location
   group_face_encoding = face_recognition.face_encodings(group_photo)[counter]
   result = face_recognition.compare_faces([my_face_encoding], group_face_encoding)
   if result[0] == True:
-    print "Found at face ", counter
+    print("Found at face ", counter)
     tp, rt, bt, lt = group_face_locations[counter]
-    print "The rectangle is ", tp, rt, bt, lt
+    print("The rectangle is ", tp, rt, bt, lt)
   counter+=1
 
 import cv2
